@@ -1,0 +1,77 @@
+.react-emoji-picker--wrapper {
+    /* top: -435px !important; */
+    /* position: absolute; */
+}
+
+.react-input-emoji--container {
+    border: none !important;
+    margin: 0 !important;
+    
+}
+
+.react-input-emoji--placeholder {
+    left: 0 !important;
+   
+}
+
+.react-input-emoji--button {
+    padding-right: 0 !important;
+    position: absolute !important;
+    right: 42px;
+    bottom: 15px;
+    z-index: 999;
+}
+
+.react-input-emoji--button svg {
+    fill: #F41A1C !important;
+    height: 20px;
+}
+
+.button-active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+.react-input-emoji--input {
+    padding: 0 25px 0 0 !important;
+}
+
+.react-emoji {
+    align-items: flex-end !important;
+    padding: 5px 0 5px 10px;
+    width: 100%;
+    position: static !important;
+}
+
+.auto-generate-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.auto-generate-option svg {
+    font-size: 16px;
+}
+
+.auto-generate-option span {
+    font-size: 12px;
+    color: rgb(158, 158, 158, 1);
+}
+
+  .modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; 
+    height: 100vh; 
+    display: flex;
+    justify-content: flex-end; 
+    z-index: 1000; 
+  }
+  
+  .SideModal {
+    width: 100%; 
+    background: white; 
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); 
+  }
+  

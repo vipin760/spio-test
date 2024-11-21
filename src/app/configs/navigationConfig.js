@@ -1,0 +1,756 @@
+/* eslint-disable prettier/prettier */
+import i18next from "i18next";
+import { User_Roles } from "../globalConstants";
+import ar from "./navigation-i18n/ar";
+import en from "./navigation-i18n/en";
+
+i18next.addResourceBundle("en", "navigation", en);
+i18next.addResourceBundle("ar", "navigation", ar);
+
+export const cpasshost = [
+  "cpass.spiolabs.com",
+  "cpdev.spiolabs.com",
+  "localhost"
+];
+
+export const portalhost = ["portal.spiolabs.com", "dev.spiolabs.com",];
+export const faceIdhost = ["face.spiolabs.com ", "facedev.spiolabs.com",];
+export const connecthost = ["connect.spiolabs.com", "connectdev.spiolabs.com",];
+
+const navigationConfig = [
+  {
+    id: "dashboard",
+    title: "Dashboard",
+    translate: "DASHBOARD",
+    type: "item",
+    icon: "material-solid:space_dashboard",
+    url: "dashboard",
+    host: portalhost,
+  },
+  {
+    id: "dash",
+    title: "Dashboard",
+    translate: "DASH",
+    type: "item",
+    icon: "material-solid:space_dashboard",
+    url: "dash",
+    host: cpasshost,
+  },
+  {
+    id: "dsh",
+    title: "Dashboard",
+    translate: "DSH",
+    type: "item",
+    icon: "material-solid:space_dashboard",
+    url: "faceid_dashboard",
+    host: faceIdhost,
+  },
+  {
+    id: "dashboard_connect",
+    title: "Dashboard",
+    translate: "DS",
+    type: "item",
+    icon: "material-solid:space_dashboard",
+    url: "connect_dashboard",
+    host: connecthost,
+  },
+  {
+    id: "reviews",
+    title: "Reviews",
+    translate: "REVIEWS",
+    type: "item",
+    icon: "material-outline:reviews",
+    url: "views",
+    host: cpasshost,
+  },
+  {
+    id: "get",
+    title: "Get Reviews",
+    translate: "GET_REVIEWS",
+    type: "item",
+    icon: "material-solid:review",
+    url: "reviews",
+    host: cpasshost,
+  },
+  {
+    id: "review link",
+    title: "Review Link",
+    translate: "REVIEW_LINK",
+    type: "item",
+    icon: "material-solid:link2",
+    url: "review_link",
+    host: cpasshost,
+  },
+  {
+    id: "reports-of-spio",
+    title: "Analytics_reports",
+    type: "collapse",
+    icon: "material-solid:analytics",
+    translate: "ANALYTICS_REPORTS",
+    host: cpasshost,
+    children: [
+      {
+        id: "Reviews&Ratings",
+        title: "Reviews&Ratings",
+        type: "item",
+        translate: "REVIEWS_AND_RATINGS",
+        url: "reviews&ratings",
+        host: cpasshost,
+      },
+      {
+        id: "location-wise-graph",
+        title: "LocationWiseGraph",
+        type: "item",
+        translate: "LOCATION_WISE_GRAPH",
+        url: "location_wise_graph",
+        host: cpasshost,
+      },
+      {
+        id: "reviews-distribution-by-employee",
+        title: "ReviewsDistributionByEmployee",
+        type: "item",
+        translate: "REVIEWS_DISTRIBUTION_BY_EMPLOYEE",
+        url: "reviews_distribution_by_employee",
+        host: cpasshost,
+      },
+      {
+        id: "reponsive-time-over-time",
+        title: "ResponsiveTimeOverTine",
+        type: "item",
+        translate: "RESPONSIVE_TIME_OVER_TIME",
+        url: "responsive_time_over_time",
+        host: cpasshost,
+      },
+      {
+        id: "response-time-distribution",
+        title: "ResponseTimeDistribution",
+        type: "item",
+        translate: "RESPONSE_TIME_DISTRIBUTION",
+        url: "response_time_distribution",
+        host: cpasshost,
+      },
+      {
+        id: "leaderboard",
+        title: "Leaderboard",
+        type: "item",
+        translate: "LEADERBOARD",
+        url: "leaderboard",
+        host: cpasshost,
+      },
+      {
+        id: "response-rate-by-city",
+        title: "ResponseRateByCity",
+        type: "item",
+        translate: "RESPONSE_RATE_BY_CITY",
+        url: "response_rate_by_city",
+        host: cpasshost,
+      },
+      {
+        id: "review-nps-by-location",
+        title: "ReviewNPSbyLoaction",
+        type: "item",
+        translate: "REVIEW_NPS_BY_LOCATION",
+        url: "reviews_nps_by_location",
+        host: cpasshost,
+      },
+    ]
+  },
+  {
+    id: "automate",
+    title: "Automate",
+    translate: "AUTOMATE",
+    type: "item",
+    icon: "material-solid:automate",
+    url: "automate",
+    host: cpasshost,
+    hide: [0]
+  },
+  {
+    id: "portal_analytics",
+    title: "Analytics_Portal",
+    type: "item",
+    icon: "material-solid:analytics",
+    translate: "ANALYTICS_PORTAL",
+    host: portalhost,
+  },
+  {
+    id: "faceid_analytics",
+    title: "Analytics_FaceID",
+    type: "item",
+    icon: "material-solid:analytics",
+    translate: "ANALYTICS_FACEID",
+    host: faceIdhost,
+  },
+  {
+    id: "connect_analytics",
+    title: "Analytics_Connect",
+    type: "collapse",
+    icon: "material-solid:analytics",
+    translate: "ANALYTICS_CONNECT",
+    host: connecthost,
+    children: [
+      {
+        id: "live cdr",
+        title: "Live CDR",
+        translate: "LIVE_CDR",
+        type: "item",
+        url: "live_cdr",
+        host: connecthost,
+      },
+    ]
+  },
+  {
+    id: "internet-Policies",
+    title: "Internet Access",
+    translate: "INTERNET_POLICIES",
+    type: "collapse",
+    icon: "material-solid:wifi_protected_setup",
+    host: portalhost,
+    children: [
+      ///HOSPITALS
+      {
+        id: "OP",
+        title: "OP",
+        translate: "OP",
+        type: "item",
+        url: "OP",
+        institutionTypeId: "1",
+        host: portalhost
+      },
+      {
+        id: "IP",
+        title: "IP",
+        translate: "IP",
+        type: "item",
+        url: "IP",
+        institutionTypeId: "1",
+      },
+      {
+        id: "employee_hospital",
+        title: "Emoployee",
+        translate: "EMPLOYEE",
+        type: "item",
+        url: "staff",
+        institutionTypeId: "1",
+      },
+      {
+        id: "Vendor_retail",
+        title: "Vendor",
+        translate: "VENDOR",
+        type: "item",
+        url: "Vendor",
+        institutionTypeId: "1",
+        host: portalhost,
+        hide: [0]
+      },
+      {
+        id: "iot_hospital",
+        title: "IOT",
+        translate: "IOT",
+        type: "item",
+        url: "iot",
+        institutionTypeId: "1",
+      },
+      {
+        id: "doctors",
+        title: "Doctors",
+        translate: "DOCTOR",
+        type: "item",
+        url: "private_user_access",
+        institutionTypeId: "1",
+      },
+    ]
+  },
+  {
+    id: 'vouchers',
+    title: 'Vouchers',
+    translate: 'VOUCHERS',
+    icon: "material-solid:label",
+    type: 'item',
+    url: 'vouchers',
+    host: portalhost
+  },
+  {
+    id: "user-Database",
+    title: "User Database",
+    translate: "USER_DATABASE",
+    type: "collapse",
+    icon: "heroicons-outline:user-group",
+    host: portalhost,
+    children: [
+      {
+        id: "registered-users",
+        title: "Registered Users",
+        translate: "REGISTERED_USERS",
+        type: "item",
+        url: "registered_users",
+      },
+      {
+        id: "temporary-users",
+        title: "Unverified Users",
+        translate: "TEMPORARY_USERS",
+        type: "item",
+        url: "temporary_users",
+      },
+    ],
+  },
+  {
+    id: "connectuser-Database",
+    title: "User Database",
+    translate: "CONNECT_USER_DATABASE",
+    type: "collapse",
+    icon: "heroicons-outline:user-group",
+    host: faceIdhost,
+    children: [
+      {
+        id: "registered-users",
+        title: "Registered Users",
+        translate: "REGISTERED_USERS",
+        type: "item",
+        url: "registered_users",
+      },
+      {
+        id: "temporary-users",
+        title: "Unverified Users",
+        translate: "TEMPORARY_USERS",
+        type: "item",
+        url: "temporary_users",
+      },
+    ],
+  },
+  {
+    id: "hardware",
+    title: "Hardware",
+    translate: "HARDWARE",
+    type: "collapse",
+    icon: "material-solid:developer_mode",
+    host: portalhost,
+    url: 'monitoring',
+    children: [
+      {
+        id: "monitering",
+        title: "Monitering",
+        translate: "MONITERING",
+        type: "item",
+        url: "monitoring",
+      },
+      {
+        id: "ports",
+        title: "Ports",
+        translate: "PORTS",
+        type: "item",
+        url: "ports",
+      },
+      {
+        id: "gateways",
+        title: "Gate ways",
+        translate: "GATEWAYS",
+        type: "item",
+        url: "gateways",
+      },
+    ],
+  },
+  // Connect Settings
+  {
+    id: "connect_settings",
+    title: "Settings",
+    translate: "SETTINGS",
+    type: "collapse",
+    icon: "material-solid:settings_suggest",
+    host: connecthost,
+    children: [
+      {
+        id: "did-master",
+        title: "DID Master",
+        translate: "DID_MASTER",
+        type: "item",
+        url: "did_master",
+      },
+      {
+        id: "virtual-no-mapping",
+        title: "Virtual No Mapping",
+        translate: "VIRTUAL_NO_MAPPING",
+        type: "item",
+        url: "virtualNoMappingCopy",
+      },
+      {
+        id: "general-settings",
+        title: "General Settings",
+        translate: "GENERAL_SETTINGS",
+        type: "collapse",
+        children: [
+          {
+            id: "administrators",
+            title: "Administrators",
+            translate: "ADMINISTRATORS",
+            type: "item",
+            url: "administrators",
+          },
+          {
+            id: "license-billing",
+            title: "Billing details",
+            translate: "BILLING_DETAILS",
+            type: "item",
+            url: "billing_details",
+          },
+          {
+            id: "branches",
+            title: "Branches",
+            translate: "BRANCHES",
+            type: "item",
+            url: "branch",
+          },
+          {
+            id: "account-information",
+            title: "Account Information",
+            translate: "LOCATION_INFORMATION",
+            type: "item",
+            url: "account_information",
+          },
+        ]
+      },
+    ]
+  },
+  // Review Settings
+  {
+    id: "review_settings",
+    title: "Settings",
+    translate: "SETTINGS",
+    type: "collapse",
+    icon: "material-solid:settings_suggest",
+    host: cpasshost,
+    children: [
+      {
+        id: "employee-master",
+        title: "Employee Master",
+        translate: "EMPLOYEE_MASTER",
+        type: "item",
+        url: "employee_master",
+      },
+      {
+        id: "general-settings",
+        title: "General Settings",
+        translate: "GENERAL_SETTINGS",
+        type: "collapse",
+        children: [
+          {
+            id: "administrators",
+            title: "Administrators",
+            translate: "ADMINISTRATORS",
+            type: "item",
+            url: "administrators",
+          },
+          {
+            id: "license-billing",
+            title: "Billing details",
+            translate: "BILLING_DETAILS",
+            type: "item",
+            url: "billing_details",
+          },
+          {
+            id: "branches",
+            title: "Branches",
+            translate: "BRANCHES",
+            type: "item",
+            url: "branch",
+          },
+          {
+            id: "account-information",
+            title: "Account Information",
+            translate: "LOCATION_INFORMATION",
+            type: "item",
+            url: "account_information",
+          },
+        ]
+      },
+      {
+        id: "templetes",
+        title: "Templates",
+        translate: "TEMPLATES",
+        type: "item",
+        url: "templates",
+      },
+      {
+        id: "social",
+        title: "Social",
+        translate: "SOCIAL",
+        type: "item",
+        url: "social",
+      },
+      {
+        id: "custom",
+        title: "Custom",
+        translate: "CUSTOM",
+        type: "item",
+        url: "custom",
+        host: cpasshost,
+      },
+      {
+        id: "integration",
+        title: "Integration",
+        translate: "INTEGRATION",
+        type: "item",
+        url: "integration",
+      },
+    ]
+  },
+  // Portal Settings
+  {
+    id: "portal_settings",
+    title: "Settings",
+    translate: "SETTINGS",
+    type: "collapse",
+    icon: "material-solid:settings_suggest",
+    host: portalhost,
+    children: [
+      {
+        id: "general-settings",
+        title: "General Settings",
+        translate: "GENERAL_SETTINGS",
+        type: "collapse",
+        children: [
+          {
+            id: "administrators",
+            title: "Administrators",
+            translate: "ADMINISTRATORS",
+            type: "item",
+            url: "administrators",
+          },
+          {
+            id: "license-billing",
+            title: "Billing details",
+            translate: "BILLING_DETAILS",
+            type: "item",
+            url: "billing_details",
+          },
+          {
+            id: "branches",
+            title: "Branches",
+            translate: "BRANCHES",
+            type: "item",
+            url: "branch",
+          },
+          {
+            id: "institutions",
+            title: "Institutions",
+            translate: "INSTITUTIONS",
+            type: "item",
+            //icon: 'ng-tns-c5-5 fas fa-building-columns',
+            url: "institution",
+          },
+          {
+            id: "account-information",
+            title: "Account Information",
+            translate: "LOCATION_INFORMATION",
+            type: "item",
+            url: "account_information",
+          },
+        ]
+      },
+      {
+        id: "integration",
+        title: "Integration",
+        translate: "INTEGRATION",
+        type: "item",
+        url: "wifi-integration",
+      },
+      {
+        id: "network-settings",
+        title: "Network Settings",
+        translate: "NETWORK_SETTINGS",
+        type: "collapse",
+        children: [
+          {
+            id: "auth-options",
+            title: "Authentication Option",
+            translate: "AUTHENTICATION_OPTION",
+            type: "item",
+            url: "auth_options",
+          },
+          {
+            id: "surfing-policies",
+            title: "Surfing Policies",
+            translate: "SURFING_POLICIES",
+            type: "item",
+            url: "surfing_policies",
+          },
+          {
+            id: "gateways",
+            title: "Gateways",
+            translate: "GATEWAYS_SETTINGS",
+            type: "item",
+            url: "gateways_settings",
+          },
+        ],
+      },
+      {
+        id: "advanced-settings",
+        title: "Advanced Settings",
+        translate: "ADVANCED_SETTINGS",
+        type: "collapse",
+        children: [
+          {
+            id: "dhcp",
+            title: "DHCP",
+            clssName: "m-0",
+            translate: "DHCP",
+            type: "collapse",
+            host: portalhost,
+            hide: [0],
+            children: [
+              {
+                id: "dhcp-clients",
+                title: "DHCP Clients",
+                translate: "DHCP_CLIENTS",
+                type: "item",
+                url: "dhcp_clients",
+                host: portalhost,
+                hide: [0],
+              },
+              {
+                id: "reserved-clients",
+                title: "Reserved Clients",
+                translate: "RESERVED_CLIENTS",
+                type: "item",
+                url: "reserved_clients",
+                host: portalhost,
+                hide: [0],
+              },
+            ],
+          },
+          {
+            id: "port-forwarding",
+            title: "Port Forwarding",
+            translate: "PORT_FORWARDING",
+            type: "item",
+            url: "port_forwarding",
+            host: portalhost,
+            hide: [0],
+          },
+          {
+            id: "web-filters",
+            title: "Web Filters",
+            translate: "WEB_FILTERS",
+            type: "item",
+            url: "web_filters",
+            host: portalhost,
+            hide: [0],
+          },
+        ]
+      }
+    ]
+  },
+  // FaceID Settings
+  {
+    id: "faceid_settings",
+    title: "Settings",
+    translate: "SETTINGS",
+    type: "collapse",
+    icon: "material-solid:settings_suggest",
+    host: faceIdhost,
+    children: [
+      {
+        id: "general-settings",
+        title: "General Settings",
+        translate: "GENERAL_SETTINGS",
+        type: "collapse",
+        children: [
+          {
+            id: "administrators",
+            title: "Administrators",
+            translate: "ADMINISTRATORS",
+            type: "item",
+            url: "administrators",
+          },
+          {
+            id: "license-billing",
+            title: "Billing details",
+            translate: "BILLING_DETAILS",
+            type: "item",
+            url: "billing_details",
+          },
+          {
+            id: "branches",
+            title: "Branches",
+            translate: "BRANCHES",
+            type: "item",
+            url: "branch",
+          },
+          {
+            id: "account-information",
+            title: "Account Information",
+            translate: "LOCATION_INFORMATION",
+            type: "item",
+            url: "account_information",
+          },
+        ]
+      },
+    ]
+  },
+  {
+    id: "processing",
+    title: "Processing",
+    translate: "PROCESSING",
+    type: "item",
+    icon: "material-solid:space_dashboard",
+    url: "processing",
+    host: faceIdhost,
+  },
+  {
+    id: "configuration",
+    title: "Configuration",
+    translate: "CONFIGURATION",
+    type: "item",
+    icon: "material-solid:perm_data_setting",
+    url: "configuration",
+    host: faceIdhost,
+  },
+  {
+    id: "notification",
+    title: "Notification",
+    translate: "NOTIFICATION",
+    type: "item",
+    icon: "material-solid:notifications_none",
+    url: "notification",
+    host: faceIdhost,
+  },
+  {
+    id: "review_logout",
+    title: "Logout",
+    translate: "LOGOUT",
+    type: "item",
+    icon: "material-outline:logout",
+    url: "sign-out",
+    host: cpasshost,
+  },
+  {
+    id: "portal_logout",
+    title: "Logout",
+    translate: "LOGOUT",
+    type: "item",
+    icon: "material-outline:logout",
+    url: "sign-out",
+    host: portalhost,
+  },
+  {
+    id: "faceid_logout",
+    title: "Logout",
+    translate: "LOGOUT",
+    type: "item",
+    icon: "material-outline:logout",
+    url: "sign-out",
+    host: faceIdhost,
+  },
+  {
+    id: "connect_logout",
+    title: "Logout",
+    translate: "LOGOUT",
+    type: "item",
+    icon: "material-outline:logout",
+    url: "sign-out",
+    host: connecthost,
+  },
+];
+
+export default navigationConfig;
+

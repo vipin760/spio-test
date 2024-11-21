@@ -1,0 +1,31 @@
+.title{
+    font-size: 20px;
+    font-weight: 800;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.reports-filter-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.filter-icon {
+    padding: 5px;
+    border: 1px solid #B9BABC;
+    border-radius: 4px;
+}
+.main-content-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.main-content-title h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #111827;
+}

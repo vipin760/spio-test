@@ -1,0 +1,26 @@
+{
+  "source": [
+    { "id": 1, "name": "Google", "value": "GOOGLE" },
+    { "id": 2, "name": "Facebook", "value": "FACEBOOK" },
+    { "id": 3, "name": "Trustpilot", "value": "TRUSTPILOT" },
+    { "id": 4, "name": "Trip Advisor", "value": "TRIPADVISOR" },
+    { "id": 5, "name": "Custom Integration", "value": "CUSTOM_INTEGRATION" },
+    { "id": 6, "name": "Booking.com", "value": "BOOKINGS" },
+    { "id": 7, "name": "Airbnb", "value": "AIRBNB" },
+    { "id": 8, "name": "Google Play", "value": "GOOGLE_PLAY" },
+    { "id": 9, "name": "Spio", "value": "SPIO" }
+  ],
+  "answerStatus": [
+    { "id": 1, "name": "Answered", "isAnswer": true },
+    { "id": 2, "name": "Not Answered", "isAnswer": false }
+  ],
+  "datePeriods": [
+    { "id": 1, "value": "", "name": "All" },
+    { "id": 2, "value": "today", "name": "Today" },
+    { "id": 3, "value": "yesterday", "name": "Yesterday" },
+    { "id": 4, "value": "7daysago", "name": "7 Days" },
+    { "id": 5, "value": "30daysago", "name": "30 Days" },
+    { "id": 6, "value": "6monthsago", "name": "6 Months" },
+    { "id": 7, "value": "12monthsago", "name": "12 Months" }
+  ]
+}
