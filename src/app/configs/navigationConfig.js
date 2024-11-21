@@ -10,7 +10,7 @@ i18next.addResourceBundle("ar", "navigation", ar);
 export const cpasshost = [
   "cpass.spiolabs.com",
   "cpdev.spiolabs.com",
-  "spio-prod-test.web.app"
+  "localhost"
 ];
 
 export const portalhost = ["portal.spiolabs.com", "dev.spiolabs.com",];
